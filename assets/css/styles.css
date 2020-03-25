@@ -1,24 +1,46 @@
+html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../../assets/images/spaceballs_background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	text-align: center;
 }
 
 #RPG {
 	font-size: 54px;
 	font-family: 'Rubik Mono One', sans-serif;
+	color: whitesmoke;
+}
+
+.row {
+	margin: 5px;
 }
 
 .firstRow {
-	border-style: solid;
+	/* border-style: solid;
 	border-width: 3px;
 	border-color: white;
-	box-sizing: border-box;
+	box-sizing: border-box; */
 	outline-style: solid;
 	outline-color: limegreen;
 	outline-width: 3px;
 	align-items: center;
 	background-color: white;
+	width: 150px;
+	height: 192px;
+	margin: 0px;
+}
+
+p.name {
+	margin: 0px;
 }
 
 .name,
@@ -26,32 +48,58 @@ body {
 	text-align: center;
 	font-size: 12px;
 	font-family: 'Rubik Mono One', sans-serif;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
+	margin: 0px;
 }
 
 #imagelonestar,
 #imagepresskroob,
 #imagepth,
 #imagedh {
-	width: 300px;
-	height: 275px;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
 }
 
 p {
 	color: white;
 	font-size: 15px;
 	font-family: 'Rubik Mono One', sans-serif;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+p.name {
+	color: black;
+	font-size: 15px;
+	font-family: 'Rubik Mono One', sans-serif;
+}
+
+p.name.namedh {
+	font-size: 16.1px;
 }
 
 .col-12 {
 	font-size: 15px;
 	font-family: 'Rubik Mono One', sans-serif;
+	margin: 8px;
 }
 
-.padLeft {
+.col-3 {
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: inline-block;
+}
+
+/* .padLeft {
 	padding-left: 20px;
 	padding-top: 3px;
-}
+} */
 
 #picRow {
 	width: 59%;
@@ -63,9 +111,9 @@ p {
 #enemies3 {
 	float: left;
 }
-.move {
+/* .move {
 	float: left;
-}
+} */
 
 .float {
 	float: left;
