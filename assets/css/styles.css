@@ -20,8 +20,17 @@ h1 {
 	color: whitesmoke;
 }
 
-.row {
-	margin: 5px;
+.col-2 {
+	margin: 20px;
+	padding-left: 65px;
+}
+
+#defender.col-3 {
+	padding-left: 85px;
+}
+
+p.defender {
+	padding-left: 45px;
 }
 
 .firstRow {
@@ -57,7 +66,7 @@ p.name {
 #imagepth,
 #imagedh {
 	width: 150px;
-	height: 150px;
+	height: 149px;
 	margin: 0 auto;
 }
 
@@ -67,6 +76,15 @@ p {
 	font-family: 'Rubik Mono One', sans-serif;
 	margin-left: 50px;
 	margin-top: 10px;
+}
+
+p.eata {
+	text-align: center;
+	margin: 0px;
+}
+
+#myChar {
+	padding-left: 100px;
 }
 
 p.name {
@@ -88,6 +106,7 @@ p.name {
 .col-3 {
 	padding: 0px;
 	margin-top: 10px;
+	padding-left: 85px;
 }
 
 .clearfix::after {
@@ -117,4 +136,8 @@ p.name {
 
 .float {
 	float: left;
+}
+
+button {
+	margin-left: 70px;
 }

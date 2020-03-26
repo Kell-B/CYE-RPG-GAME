@@ -23,7 +23,7 @@ function reset() {
 	$('.fightSection').hide();
 	$('.defender').hide();
 	$('.yourCharacter').hide();
-	alert('Choose your fighter!');
+	alert('Choose your fighter! And may the schwartz be with you!');
 
 	// reset myChar and myDef to equal nothing.
 	var myChar = '';
@@ -66,7 +66,7 @@ function reset() {
 	//writing each characters healthpoints to the html so they show up on the page.
 	$('.lonestarhp').html(characters.Lonestar.healthPoints);
 	$('.presskroobhp').html(characters.PresSkroob.healthPoints);
-	$('.pizzathutthp').html(characters.PizzatheHutt.healthPoints);
+	$('.pizzathehutthp').html(characters.PizzatheHutt.healthPoints);
 	$('.darkhelmethp').html(characters.DarkHelmet.healthPoints);
 
 	// reset border colors.
@@ -80,7 +80,7 @@ function reset() {
 	});
 }
 
-// array to hold each characters/object stats.
+// Object to hold each characters/object stats.
 var characters = {
 	Lonestar     : {
 		name               : 'Lonestar',
@@ -199,7 +199,7 @@ $(document).ready(function() {
 
 		// }
 		// if else statements that determine who is currently "Defender" and assign
-		// that person to the character array's properties.
+		// that person to the character objects properties.
 		if (YourDefender == characters.Lonestar.name) {
 			defenderHP = characters.Lonestar.healthPoints;
 			defenderAP = characters.Lonestar.attackPower;
@@ -228,7 +228,7 @@ $(document).ready(function() {
 	});
 
 	// when the user clicks attack, the player/Your Character's Health Points go down based on the counter attack
-	// property of the "Defender".Their counter attack decreases your health.
+	// property of the "Defender". Their counter attack decreases your health.
 	$('.attackButton').click(function() {
 		// if player clicks attack button and no one is in the "defender" div, then
 		// game says "no enemy here".
@@ -238,17 +238,18 @@ $(document).ready(function() {
 
 		if (!(attackerHP < 1) || !(defenderHP < 1)) {
 			// when button is clicked (if both players healthpoints are not 0,
-			// the game subtracks the defendersCAP from the attackers HP.)
+			// the game subtracts the defendersCAP from the attackers HP.)
 			attackerHP = attackerHP - defenderCAP;
 
 			// writing the attacker/Your Character's new healthpoints to the html.
 			$('.' + YourCharacter).html(attackerHP);
+			console.log(attackerHP);
 
 			// writing the text "You attacked Character for 8 damage".
 			$('.youAttacked').html('You attacked ' + defenderFN + ' for ' + attackerAP + ' damage.');
 
 			// when button is clicked (if both players healthpoints are not 0,
-			// the game subtracks the attackers AP points from the defenders HP.)
+			// the game subtracts the attackers AP points from the defenders HP.)
 			defenderHP = defenderHP - attackerAP;
 
 			// writing the text "Character attacked you back for 10 damage."
@@ -299,9 +300,15 @@ $(document).ready(function() {
 			// show the restart button.
 			$('.restart').show();
 
-			// hide the attack button.
+			// hide all but your character elements on screen
 			$('.attackButton').hide();
-
+			$('.fightSection').hide();
+			$('.defender').hide();
+			$('.eata').hide();
+			$('#enemies0').hide();
+			$('#enemies1').hide();
+			$('#enemies2').hide();
+			$('#enemies3').hide();
 			// You lose.
 			$('.youAttacked').empty();
 			$('.attackedBack').empty();
