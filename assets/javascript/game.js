@@ -114,7 +114,7 @@ var characters = {
 		visual             : 'assets/images/dark_helmet.jpg',
 		healthPoints       : 180,
 		attackPower        : 12,
-		fullName           : 'Dark Helmet',
+		fullName           : 'The Evil Dark Helmet',
 		counterAttackPower : 25
 	}
 };
